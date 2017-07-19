@@ -68,7 +68,7 @@ for(i in 1:length(inputXCMS@filepaths))
   }
 }
 
-
+valid<-F
 PeakML.DilutionTrendFilter(filename=inputPeakML,
                             ionisation="detect", Rawpath=NULL, trendSets=dilutionTrend,
                             p.value.thr=pvalueCutoff, outputfile=output)
