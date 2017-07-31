@@ -57,8 +57,10 @@ for(i in 1:length(inputXCMS@filepaths))
   }
 }
 
-
+if(length(inputXCMS@filepaths)==1)
+{
+mzmatch.R::PeakML.xcms.write.SingleMeasurement(xset = inputXCMS,filename = output,ionisation = "positive")
+}else{
 mzmatch.R::PeakML.xcms.write(xset = inputXCMS,filename = output,ionisation = "positive")
 
-
-
+}
